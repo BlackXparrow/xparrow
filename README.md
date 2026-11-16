@@ -22,7 +22,7 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 | **Session Plan** | Today's loot list, map guidance and progress. |
 | **Blueprints & Crafting, Wikelo, Black Market** | Recipes, contracts, contraband and where to find things. |
 | **Overlay** | A small always-on-top panel for use while playing. |
-| **Tablet MFD** | Power, weapons, shields and fire mode from a tablet or phone on your network, styled after each ship maker. It uses the binds you set in the game. |
+| **Tablet MFD** | Power, weapons, shields and fire mode from a tablet or phone on your network. Every ship you board changes the MFD: the maker's look, its logo and that ship's power pip setup. It uses the binds you set in the game. |
 | **Settings & Keybinding** | Your binds, curves and graphics settings, read from the game files. |
 | **On-demand 3D** | Ships that have no 3D model yet can load it from your game files: *Load 3D from my game files* on the ship, or *Load all missing 3D* in Settings. |
 
