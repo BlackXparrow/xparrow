@@ -68,6 +68,30 @@ Star Citizen's models, textures and data belong to Cloud Imperium Games. Xparrow
 
 Allow Xparrow through Windows Firewall on **private** networks when Windows asks.
 
+## How to use the tablet MFD
+
+<p align="center"><img src="promo/tablet_drake.jpg" width="80%" alt="Tablet MFD, power screen (Drake theme)"></p>
+
+**How it works:** the tablet doesn't read the game. It only presses the keybinds you set in Star Citizen, so it knows what it sent, not what the game currently shows. There's a small learning curve. Once you've matched it to your ship, it's quick.
+
+1. **Board a ship.** The tablet switches to that ship by itself: the maker's look and logo, and that ship's power pip layout.
+2. **Match the tablet to the cockpit.** Every ship starts with its own default power setup: how many pips go to weapons, engines and shields, and which systems are on or off (life support, coolers, quantum and so on). Look at the in-game power MFD, tap **MATCH**, set the tablet's columns to what you see (no keys are sent while you match), then tap **MATCH** again.
+3. **Play from the tablet.** Once matched, every tap sends your keybind and the tablet stays in sync with the game. **SYNC** sets the game to exactly what the page shows, by driving each column to 0 and back up.
+4. **Rules from the game still apply.** Quantum only powers up in NAV mode and shields power down in NAV, just like in the game.
+
+**Bind the actions first.** A button only works if its action is bound in the game. Unbound buttons stay greyed out. Go to **Options > Keybindings > Advanced Controls Customization**:
+
+- **Flight - Power:** *Toggle Power - Weapons / Thrusters / Shields* (Thrusters = Engines on the tablet) and the pip controls.
+- **Vehicles - Weapons:** *Weapon Presets - Set EMPs* (the **Set EMPs** button) and *Staggered Fire - On* / *Staggered Fire - Off* (the **Staggered / Together** button). Both are unbound by default.
+- **Flight - Movement:** *Enable / Disable decoupled mode* (CPLD), *E.S.P. - Toggle On / Off* (ESP) and *Lock Pitch / Yaw Movement* (LOCK).
+
+**Tips**
+
+- **Match again** after a respawn, after you swap ships, or if you changed power with the keyboard or the in-game MFD. The tablet can't see those changes.
+- **LOCK** sends *Lock pitch / yaw*, the LOCK light on the in-game HUD. CPLD and ESP start lit (on) and LOCK starts unlit (off). Each one flips when its key is sent.
+- Systems with no keybind in the game, like life support, radar and coolers, are "set here to match": they change on the tablet only.
+- Which gun is in which group has no keybind either. Set it in the in-game Weapon Config, then tap the squares on the tablet to match.
+
 ## Troubleshooting
 
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
