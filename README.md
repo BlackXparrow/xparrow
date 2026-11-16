@@ -1,13 +1,13 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.0
+# Xparrow 1.1.1
 
 **Gear up. Plan smart. Fly free.**
 
 Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weapons, ship loadouts, LIVE vs PTU changes, your session plan and a tablet MFD. Everything it shows is read from **your own** Star Citizen install on your PC.
 
 
-> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.0/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
+> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.1/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
 
 ## Features
 
@@ -43,10 +43,10 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.0):
+From **Releases** (v1.1.1):
 
-- `Xparrow-Setup-1.1.0.exe`: installer (Start menu shortcut, uninstaller).
-- `Xparrow-Portable-1.1.0.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.0.exe`. Nothing gets installed.
+- `Xparrow-Setup-1.1.1.exe`: installer (Start menu shortcut, uninstaller).
+- `Xparrow-Portable-1.1.1.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.1.exe`. Nothing gets installed.
 
 ## First-run setup
 
@@ -150,10 +150,22 @@ Yes. The tablet connects to Xparrow on your PC over your local network, so both 
 
 ## Credits and licences
 
+Credits match the in-app **Settings & Keybinding > About** list.
+
+- **ChrisGBG** — Star Citizen Reference Sheets (Wikelo sheet): Wikelo material amounts and where to find them.
+- [SC CraftLab](https://sccraftlab.com/wikelo) (sccraftlab.com/wikelo): Wikelo trade locations.
+- [Star Citizen Wiki](https://starcitizen.tools) (starcitizen.tools): pictures and descriptions, plus Black Market lab, drug and organisation data adapted from it (reformatted and merged into Xparrow's format). Licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); the adapted data file (`viewer/updater/sources/static/bm_static.v1.json`) is shared under the same licence.
+- **Dabalta** — “SC Alpha 4.8 FPS Data” sheet (private): Damage Viewer health values and armour-resistance cross-check. The calculator tab is not used.
+- [Erkul](https://www.erkul.games) and [SPViewer](https://www.spviewer.eu) — published weapon and item stats used only as data to fill or cross-check the Damage Viewer fire-sim where the game-file extract is missing or less complete. Their code, UI and artwork are not used.
+- [StoppingPower](https://stoppingpower.io) — public FPS `weapons.json`, used to audit weapons data. Game-file values are never overwritten from it.
+- Erkul and SPViewer — also ship-gun / ship-performance cross-checks and Erkul Browse loadout pins, and the public SPViewer changelog. Private/session APIs were not called. Code, UI and artwork are not used.
+- Community FPS and ship guides cited in presets: bustedloops, expcarry, r/starcitizen, MMOPIXEL.
+- [Star Citizen Wiki API](https://api.star-citizen.wiki) — structured `personal_weapon` JSON used only to fill RPM and spread fields that were still class defaults after the game-file extract, and to record mismatches. Game-file values are never overwritten. Their site design and other media are not used.
+- Game data comes from your own local Star Citizen install; trade prices are UEX community reports.
 - 3D export uses **StarBreaker** (`starbreaker_msvc.exe`), MIT licence. Its licence and notice ship in `tools/starbreaker/` (LICENSE, NOTICE). Thanks to its authors.
 - Built with Electron, Three.js, Vite and glTF-Transform. Their licences are included in the app.
 - Music: provided by the Xparrow team.
-- Black Market item data (labs, drug and organisation descriptions) is adapted from the [Star Citizen Wiki](https://starcitizen.tools) (starcitizen.tools), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Changes: reformatted and merged into Xparrow's own data format. The adapted data file (`viewer/updater/sources/static/bm_static.v1.json`) is shared under the same licence, CC BY-SA 4.0.
+- This is an unofficial Star Citizen fan project, not affiliated with the Cloud Imperium group of companies. All content not authored by its host or users is property of its respective owners. Official site: [robertsspaceindustries.com](https://robertsspaceindustries.com).
 
 ## Disclaimer
 
