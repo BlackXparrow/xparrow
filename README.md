@@ -156,4 +156,6 @@ Yes. The tablet connects to Xparrow on your PC over your local network, so both 
 
 ## Disclaimer
 
+*This is an unofficial Star Citizen fan project, not affiliated with the Cloud Imperium group of companies. All content not authored by its host or users is property of its respective owners.* Official Star Citizen site: [robertsspaceindustries.com](https://robertsspaceindustries.com).
+
 Xparrow is an unofficial fan project. It is **not affiliated with, endorsed by or sponsored by Cloud Imperium Games or Roberts Space Industries**. Star Citizen®, Squadron 42®, Roberts Space Industries® and Cloud Imperium® are trademarks of Cloud Imperium Rights LLC. Ship and maker names belong to their owners. No game assets are included in this project.
