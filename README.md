@@ -1,13 +1,13 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.1
+# Xparrow 1.1.2
 
 **Gear up. Plan smart. Fly free.**
 
 Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weapons, ship loadouts, LIVE vs PTU changes, your session plan and a tablet MFD. Everything it shows is read from **your own** Star Citizen install on your PC.
 
 
-> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.1/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
+> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.2/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
 
 ## Features
 
@@ -43,10 +43,10 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.1):
+From **Releases** (v1.1.2):
 
-- `Xparrow-Setup-1.1.1.exe`: installer (Start menu shortcut, uninstaller).
-- `Xparrow-Portable-1.1.1.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.1.exe`. Nothing gets installed.
+- `Xparrow-Setup-1.1.2.exe`: installer (Start menu shortcut, uninstaller).
+- `Xparrow-Portable-1.1.2.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.2.exe`. Nothing gets installed.
 
 ## First-run setup
 
