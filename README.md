@@ -153,6 +153,7 @@ Yes. The tablet connects to Xparrow on your PC over your local network, so both 
 - 3D export uses **StarBreaker** (`starbreaker_msvc.exe`), MIT licence. Its licence and notice ship in `tools/starbreaker/` (LICENSE, NOTICE). Thanks to its authors.
 - Built with Electron, Three.js, Vite and glTF-Transform. Their licences are included in the app.
 - Music: provided by the Xparrow team.
+- Black Market item data (labs, drug and organisation descriptions) is adapted from the [Star Citizen Wiki](https://starcitizen.tools) (starcitizen.tools), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Changes: reformatted and merged into Xparrow's own data format. The adapted data file (`viewer/updater/sources/static/bm_static.v1.json`) is shared under the same licence, CC BY-SA 4.0.
 
 ## Disclaimer
 
