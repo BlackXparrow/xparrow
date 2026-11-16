@@ -7,7 +7,7 @@
 Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weapons, ship loadouts, LIVE vs PTU changes, your session plan and a tablet MFD. Everything it shows is read from **your own** Star Citizen install on your PC.
 
 
-> Promo video (38 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.0/xparrow_promo.mp4)
+> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.0/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
 
 ## Features
 
@@ -30,6 +30,16 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 <img src="promo/t03_ship_loadout.jpg" width="49%"> <img src="promo/t12_ask_ptu.jpg" width="49%">
 <img src="promo/overlay_ingame_1.jpg" width="49%"> <img src="promo/tablet_mockup_makers.jpg" width="49%">
 </p>
+
+## Gallery
+
+<table>
+<tr><td width="33%" align="center"><img src="promo/clips_session_plan.jpg" width="100%"><br><sub>Session Plan: what to get and where</sub></td><td width="33%" align="center"><img src="promo/clips_outfit_helmet.jpg" width="100%"><br><sub>Outfits: armor and helmets in 3D</sub></td><td width="33%" align="center"><img src="promo/clips_outfit_compare.jpg" width="100%"><br><sub>Outfit Compare</sub></td></tr>
+<tr><td width="33%" align="center"><img src="promo/clips_weapons_attachments.jpg" width="100%"><br><sub>Weapons: loadout with attachments</sub></td><td width="33%" align="center"><img src="promo/clips_ship_3d.jpg" width="100%"><br><sub>Ship Loadout in 3D</sub></td><td width="33%" align="center"><img src="promo/clips_live_vs_ptu.jpg" width="100%"><br><sub>Ship Compare: LIVE vs PTU</sub></td></tr>
+<tr><td width="33%" align="center"><img src="promo/clips_damage_hits.jpg" width="100%"><br><sub>Damage viewer</sub></td><td width="33%" align="center"><img src="promo/clips_map_planet_info.jpg" width="100%"><br><sub>Map: planet info</sub></td><td width="33%" align="center"><img src="promo/clips_map_stanton.jpg" width="100%"><br><sub>Map: Stanton</sub></td></tr>
+<tr><td width="33%" align="center"><img src="promo/clips_map_pyro.jpg" width="100%"><br><sub>Map: Pyro</sub></td><td width="33%" align="center"><img src="promo/clips_map_nyx.jpg" width="100%"><br><sub>Map: Nyx</sub></td><td width="33%" align="center"><img src="promo/clips_controls_flight.jpg" width="100%"><br><sub>Settings & Keybinding: flight curves</sub></td></tr>
+<tr><td width="33%" align="center"><img src="promo/clips_blueprints.jpg" width="100%"><br><sub>Blueprints & Crafting</sub></td><td width="33%" align="center"><img src="promo/clips_wikelo.jpg" width="100%"><br><sub>Wikelo Emporium</sub></td><td width="33%" align="center"><img src="promo/clips_black_market.jpg" width="100%"><br><sub>Black Market</sub></td></tr>
+</table>
 
 ## Download
 
@@ -142,6 +152,7 @@ Yes. The tablet connects to Xparrow on your PC over your local network, so both 
 
 - 3D export uses **StarBreaker** (`starbreaker_msvc.exe`), MIT licence. Its licence and notice ship in `tools/starbreaker/` (LICENSE, NOTICE). Thanks to its authors.
 - Built with Electron, Three.js, Vite and glTF-Transform. Their licences are included in the app.
+- Music: provided by the Xparrow team.
 
 ## Disclaimer
 
