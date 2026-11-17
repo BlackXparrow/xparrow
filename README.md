@@ -4,6 +4,8 @@
 
 **Gear up. Plan smart. Fly free.**
 
+[![Download](https://img.shields.io/github/v/release/BlackXparrow/xparrow?label=Download&color=2ea44f)](https://github.com/BlackXparrow/xparrow/releases/latest) [![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Xparrow-c58bff?logo=ko-fi&logoColor=white)](https://ko-fi.com/blackxparrow)
+
 Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weapons, ship loadouts, LIVE vs PTU changes, your session plan and a tablet MFD. Everything it shows is read from **your own** Star Citizen install on your PC.
 
 
@@ -147,6 +149,10 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 
 **Does the tablet need the same Wi-Fi?**
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
+
+## Support
+
+Xparrow is 100% free and always will be. If you'd like to say thanks, you can leave a one-off tip on [Ko-fi](https://ko-fi.com/blackxparrow). Totally optional.
 
 ## Credits and licences
 
