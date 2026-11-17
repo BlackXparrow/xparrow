@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.4
+# Xparrow 1.1.5
 
 **Gear up. Plan smart. Fly free.**
 
@@ -9,7 +9,7 @@
 Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weapons, ship loadouts, LIVE vs PTU changes, your session plan and a tablet MFD. Everything it shows is read from **your own** Star Citizen install on your PC.
 
 
-> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.4/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
+> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.5/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
 
 ## Features
 
@@ -45,10 +45,10 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.4):
+From **Releases** (v1.1.5):
 
-- `Xparrow-Setup-1.1.4.exe`: installer (Start menu shortcut, uninstaller).
-- `Xparrow-Portable-1.1.4.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.4.exe`. Nothing gets installed.
+- `Xparrow-Setup-1.1.5.exe`: installer (Start menu shortcut, uninstaller).
+- `Xparrow-Portable-1.1.5.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.5.exe`. Nothing gets installed.
 
 ## First-run setup
 
@@ -104,6 +104,12 @@ Allow Xparrow through Windows Firewall on **private** networks when Windows asks
 - Systems with no keybind in the game, like life support, radar and coolers, are "set here to match": they change on the tablet only.
 - Which gun is in which group has no keybind either. Set it in the in-game Weapon Config, then tap the squares on the tablet to match.
 
+### Tablet keybinds (3-key combos)
+
+Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard combo** (for example *R Ctrl + R Shift + F1* for power on / off), so typing in game (map search, chat) can never trigger the tablet. If your `actionmaps.xml` doesn't have them yet, open **Settings & Keybinding > Save to game** and click **Apply Xparrow 3-key tablet binds**: your `actionmaps.xml` is backed up first, and it is only written while Star Citizen is closed. Xparrow never sends keys to set this up.
+
+**All tablet binds are editable.** If one interferes with something, change it in Star Citizen's keybinding settings (or in Xparrow's Keybinding tab). The tablet always follows whatever your `actionmaps.xml` says. We recommend keeping them as combos of at least 3 keys.
+
 ## Troubleshooting
 
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
@@ -124,6 +130,7 @@ Allow Xparrow through Windows Firewall on **private** networks when Windows asks
 - Show a star map and your position from `/showlocation` (the game copies it to the clipboard) and from `Game.log`.
 - Run an always-on-top overlay while you play.
 - Turn a tablet or phone into an MFD that presses the keys **you** bound in the game.
+- Let you change every tablet bind yourself: in Star Citizen's keybinding settings or Xparrow's Keybinding tab. The tablet follows your `actionmaps.xml`; 3-key combos (the 1.1.5 default) are recommended so typing in game never triggers them.
 - Build missing ship 3D models from your own game files, on demand.
 
 ### What Xparrow can't do (and why)
