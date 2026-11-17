@@ -16,16 +16,19 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 | | |
 |---|---|
 | **Outfits** | 3D armor and clothing viewer with turntable, colour variants and stats. |
-| **Weapons** | FPS weapons, attachments and presets, with real numbers from the game data. |
-| **Ship Loadout** | Components and guns per slot, swap and compare, and where to buy them. Ships without 3D keep full stats ("3D coming soon"). |
+| **Weapons** | FPS weapons, attachments and presets, with real numbers from the game data. Drag attachments straight onto the gun and watch the stats change. In Compare, drop one on the LIVE or PTU gun and it's fitted on both. |
+| **Ship Loadout** | Components and guns per slot, swap and compare, and where to buy them. Drag parts onto the ship, or a fitted part off it to remove it. Ships without 3D keep full stats ("3D coming soon"). |
 | **Ship Compare (LIVE vs PTU)** | Buffs, nerfs and new items between your LIVE and PTU builds, with a link to the official patch notes. |
 | **Fleet** | Hangar planner with measured bays. |
-| **Exploration** | Star map, live position and Loot Finder. |
+| **Exploration** | Star map and live position. Find hidden locations (wrecks, derelicts, caves, easter eggs) with a route to get there. Loot Finder: pick the gear and rarity you want, set a radius, and see every spot nearby that can drop it, closest first. |
+| **Mission & Blueprint tracker** | Follows your active contract from `Game.log`: payout, faction standing and the blueprints it can drop, with one-click *+ Plan*. |
+| **Ask SC** | A built-in Star Citizen Q&A: lore, items, trade prices, PTU changes. It answers from your own local data with sources, works offline and needs no account. |
 | **Session Plan** | Today's loot list, map guidance and progress. |
 | **Blueprints & Crafting, Wikelo, Black Market** | Recipes, contracts, contraband and where to find things. |
 | **Overlay** | A small always-on-top panel for use while playing. |
 | **Tablet MFD** | Power, weapons, shields and fire mode from a tablet or phone on your network. Every ship you board changes the MFD: the maker's look, its logo and that ship's power pip setup. It uses the binds you set in the game. |
 | **Settings & Keybinding** | Your binds, curves and graphics settings, read from the game files. |
+| **Joystick flight tester** | Test your sticks and fly a holographic ship with your own binds and curves: a low-flight canyon, meteor dodge, orbit and maneuver drills. |
 | **On-demand 3D** | Ships that have no 3D model yet can load it from your game files: *Load 3D from my game files* on the ship, or *Load all missing 3D* in Settings. |
 
 <p align="center">
@@ -127,6 +130,13 @@ Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard c
 - Plan ship loadouts: swap guns and components, compare them, and see where to buy them.
 - Compare your LIVE and PTU builds: what got buffed, nerfed or added, with a link to the official patch notes.
 - Plan sessions, blueprints and crafting, Wikelo contracts and Black Market runs.
+- Find hidden locations (wrecks, derelicts, caves, easter eggs) and plan the way there.
+- Find loot near you: choose gear and rarity, set your search radius, and see the closest spots that can drop it.
+- Track your missions and the blueprints they can drop, straight from `Game.log`.
+- Plan your activities: missions, loot runs, blueprints and crafting in one session plan.
+- Answer Star Citizen questions with Ask SC: lore, items, trade prices and PTU changes, offline and with sources.
+- Let you test your joystick and fly a holographic ship through practice drills, using your own binds and curves.
+- Drag and drop attachments onto weapons and components onto ships; in Weapons Compare an attachment dropped on one gun is fitted on both LIVE and PTU.
 - Show a star map and your position from `/showlocation` (the game copies it to the clipboard) and from `Game.log`.
 - Run an always-on-top overlay while you play.
 - Turn a tablet or phone into an MFD that presses the keys **you** bound in the game.
