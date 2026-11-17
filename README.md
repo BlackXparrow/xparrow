@@ -20,7 +20,7 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 | **Ship Loadout** | Components and guns per slot, swap and compare, and where to buy them. Drag parts onto the ship, or a fitted part off it to remove it. Ships without 3D keep full stats ("3D coming soon"). |
 | **Ship Compare (LIVE vs PTU)** | Buffs, nerfs and new items between your LIVE and PTU builds, with a link to the official patch notes. |
 | **Fleet** | Hangar planner with measured bays. |
-| **Exploration** | Star map and live position. Find hidden locations (wrecks, derelicts, caves, easter eggs) with a route to get there. Loot Finder: pick the gear and rarity you want, set a radius, and see every spot nearby that can drop it, closest first. |
+| **Exploration** | Star map and live position. Find hidden locations (wrecks, derelicts, caves, easter eggs) with a route to get there. Loot Finder: pick the gear and rarity you want, set a radius, and see every spot nearby that can drop it, closest first. Press *Locate* to realign the map with where you are in game. |
 | **Mission & Blueprint tracker** | Follows your active contract from `Game.log`: payout, faction standing and the blueprints it can drop, with one-click *+ Plan*. |
 | **Ask SC** | A built-in Star Citizen Q&A: lore, items, trade prices, PTU changes. It answers from your own local data with sources, works offline and needs no account. |
 | **Session Plan** | Today's loot list, map guidance and progress. |
@@ -121,6 +121,7 @@ Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard c
 - **The tablet doesn't connect:** make sure the PC and tablet are on the same network, Xparrow is running (tray icon), and the firewall allows it on private networks.
 - **A tablet button is greyed out:** bind that action in Star Citizen (Options > Keybindings), then reopen the tablet page.
 - **After a game patch the data looks old:** Xparrow refreshes when it sees the new build. The game launcher must finish updating first.
+- **The map is facing the wrong way:** press *Locate* on the Exploration map to realign it with your in-game position.
 
 ## FAQ
 
@@ -137,7 +138,7 @@ Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard c
 - Answer Star Citizen questions with Ask SC: lore, items, trade prices and PTU changes, offline and with sources.
 - Let you test your joystick and fly a holographic ship through practice drills, using your own binds and curves.
 - Drag and drop attachments onto weapons and components onto ships; in Weapons Compare an attachment dropped on one gun is fitted on both LIVE and PTU.
-- Show a star map and your position from `/showlocation` (the game copies it to the clipboard) and from `Game.log`.
+- Show a star map and your position from `/showlocation` (the game copies it to the clipboard) and from `Game.log`. Press *Locate* to place yourself and realign the map view with where you are in game.
 - Run an always-on-top overlay while you play.
 - Turn a tablet or phone into an MFD that presses the keys **you** bound in the game.
 - Let you change every tablet bind yourself: in Star Citizen's keybinding settings or Xparrow's Keybinding tab. The tablet follows your `actionmaps.xml`; 3-key combos (the 1.1.5 default) are recommended so typing in game never triggers them.
