@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.5
+# Xparrow 1.1.6
 
 **Gear up. Plan smart. Fly free.**
 
@@ -9,7 +9,7 @@
 Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weapons, ship loadouts, LIVE vs PTU changes, your session plan and a tablet MFD. Everything it shows is read from **your own** Star Citizen install on your PC.
 
 
-> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.5/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
+> Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.6/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
 
 ## Features
 
@@ -27,7 +27,8 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 | **Blueprints & Crafting, Wikelo, Black Market** | Recipes, contracts, contraband and where to find things. |
 | **Overlay** | A small always-on-top panel for use while playing. |
 | **Tablet MFD** | Power, weapons, shields and fire mode from a tablet or phone on your network. Every ship you board changes the MFD: the maker's look, its logo and that ship's power pip setup. It uses the binds you set in the game. |
-| **Settings & Keybinding** | Your binds, curves and graphics settings, read from the game files. |
+| **Settings & Keybinding** | Your binds, curves and graphics settings, read from the game files. LIVE and PTU each have their own binds. |
+| **Backup & Restore** | Save your session plan, mission tracker and Xparrow settings to a folder you pick, and restore them later or on another PC. |
 | **Joystick flight tester** | Test your sticks and fly a holographic ship with your own binds and curves: a low-flight canyon, meteor dodge, orbit and maneuver drills. |
 | **On-demand 3D** | Ships that have no 3D model yet can load it from your game files: *Load 3D from my game files* on the ship, or *Load all missing 3D* in Settings. |
 
@@ -48,10 +49,11 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.5):
+From **Releases** (v1.1.6):
 
-- `Xparrow-Setup-1.1.5.exe`: installer (Start menu shortcut, uninstaller).
-- `Xparrow-Portable-1.1.5.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.5.exe`. Nothing gets installed.
+- `Xparrow-Setup-1.1.6.exe`: installer (Start menu shortcut, uninstaller).
+- `Xparrow-Portable-1.1.6.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.6.exe`. Nothing gets installed.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.6.exe` in PowerShell and compare.
 
 ## First-run setup
 
@@ -93,6 +95,9 @@ Allow Xparrow through Windows Firewall on **private** networks when Windows asks
 2. **Match the tablet to the cockpit.** Every ship starts with its own default power setup: how many pips go to weapons, engines and shields, and which systems are on or off (life support, coolers, quantum and so on). Look at the in-game power MFD, tap **MATCH**, set the tablet's columns to what you see (no keys are sent while you match), then tap **MATCH** again.
 3. **Play from the tablet.** Once matched, every tap sends your keybind and the tablet stays in sync with the game. **SYNC** sets the game to exactly what the page shows, by driving each column to 0 and back up.
 4. **Rules from the game still apply.** Quantum only powers up in NAV mode and shields power down in NAV, just like in the game.
+5. **Usable pips.** The power column shows the pips your ship can really use (*left / usable*), not the raw power-plant output. Since 1.1.6 the usable pips per ship come from the [Star Citizen Wiki API](https://api.star-citizen.wiki) power data (`power_budget.v1.json`, CC BY-SA 4.0), so each ship gets its own total instead of the same number everywhere. If a ship looks off, tap the number to set it by hand for that ship.
+6. **NAV / SCM.** With the Xparrow 3-key binds (*Set master mode NAV / SCM*), tapping **NAV** or **SCM** switches the game directly. Without those binds the chips only show the mode and send no key.
+7. **Resync** resets power in the game (when *Reset power* has a 3-key bind) and puts the tablet back on that ship's default pips.
 
 **Bind the actions first.** A button only works if its action is bound in the game. Unbound buttons stay greyed out. Go to **Options > Keybindings > Advanced Controls Customization**:
 
@@ -111,7 +116,17 @@ Allow Xparrow through Windows Firewall on **private** networks when Windows asks
 
 Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard combo** (for example *R Ctrl + R Shift + F1* for power on / off), so typing in game (map search, chat) can never trigger the tablet. If your `actionmaps.xml` doesn't have them yet, open **Settings & Keybinding > Save to game** and click **Apply Xparrow 3-key tablet binds**: your `actionmaps.xml` is backed up first, and it is only written while Star Citizen is closed. Xparrow never sends keys to set this up.
 
+**PTU has its own keybinds.** Star Citizen keeps a separate `actionmaps.xml` for PTU. To use the tablet on PTU, open **Settings & Keybinding**, pick **PTU** at the top, go to **Save to game** and click **Apply Xparrow 3-key tablet binds** (with the game closed; a backup is made first). The tablet and the mission helper follow whichever build you started (the newest `Game.log`).
+
 **All tablet binds are editable.** If one interferes with something, change it in Star Citizen's keybinding settings (or in Xparrow's Keybinding tab). The tablet always follows whatever your `actionmaps.xml` says. We recommend keeping them as combos of at least 3 keys.
+
+## Backup & Restore
+
+**Settings & Keybinding > About > App > Backup & Restore**
+
+- **Back up** asks for a folder (Xparrow remembers your last choice) and saves a timestamped folder `Xparrow-backup-YYYY-MM-DD_HHMMSS` with your session plan (`plan-sync.json`), mission tracker (`mission-state.json`) and Xparrow's own settings.
+- **Restore** picks a backup folder, asks you to confirm, keeps a safety copy of what it replaces, and then reloads.
+- Game files are not part of the backup. Your `actionmaps.xml` backups stay in the Keybinding tab.
 
 ## Troubleshooting
 
@@ -122,6 +137,14 @@ Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard c
 - **A tablet button is greyed out:** bind that action in Star Citizen (Options > Keybindings), then reopen the tablet page.
 - **After a game patch the data looks old:** Xparrow refreshes when it sees the new build. The game launcher must finish updating first.
 - **The map is facing the wrong way:** press *Locate* on the Exploration map to realign it with your in-game position.
+- **Setup stuck on step 2 / `EPERM` rename `status.json`:** fixed in 1.1.6. If it ever happens again:
+  1. Close Xparrow fully: tray icon > **Quit**, then end any leftover *Xparrow* in Task Manager.
+  2. In `<data drive>\Xparrow\data\update\`, delete only `status.json` and any `status.json.tmp-*` files.
+  3. Start Xparrow again and press **Continue**. It resumes where it stopped.
+  4. If it still loops, add the Xparrow data folder as an exclusion in your antivirus, and allow Xparrow in **Windows Security > Ransomware protection** (Controlled folder access).
+- **Tablet in PTU:** PTU has its own keybinds. In Settings & Keybinding pick **PTU** at the top and apply the 3-key tablet binds there (game closed). The tablet follows the build you started.
+- **Holding the master-mode button stopped switching NAV / SCM:** bind the tap actions *Cycle Master Mode* or *Set Master Mode NAV / SCM* in Star Citizen instead of the hold. With the Xparrow 3-key binds, tapping **NAV** or **SCM** on the tablet switches the game directly. The tablet notices a master-mode press within about 0.2 s.
+- **Tablet pips look wrong for a ship:** tap **MATCH** and set the columns to what the cockpit shows, or **Resync** to reset power in the game and on the tablet.
 
 ## FAQ
 
@@ -141,8 +164,10 @@ Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard c
 - Show a star map and your position from `/showlocation` (the game copies it to the clipboard) and from `Game.log`. Press *Locate* to place yourself and realign the map view with where you are in game.
 - Run an always-on-top overlay while you play.
 - Turn a tablet or phone into an MFD that presses the keys **you** bound in the game.
-- Let you change every tablet bind yourself: in Star Citizen's keybinding settings or Xparrow's Keybinding tab. The tablet follows your `actionmaps.xml`; 3-key combos (the 1.1.5 default) are recommended so typing in game never triggers them.
+- Let you change every tablet bind yourself: in Star Citizen's keybinding settings or Xparrow's Keybinding tab. The tablet follows your `actionmaps.xml`; 3-key combos (the default since 1.1.5) are recommended so typing in game never triggers them.
 - Build missing ship 3D models from your own game files, on demand.
+- Use the tablet on LIVE and PTU: it follows the build you started, each with its own binds.
+- Back up and restore your session plan, mission tracker and settings.
 
 ### What Xparrow can't do (and why)
 
@@ -151,6 +176,8 @@ Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard c
 - **No changing game files.** The one exception is the MFD keybinds you approve in `actionmaps.xml`. Xparrow only writes those with the game closed, and it makes a backup first.
 - **It can't press anything the game has no keybind for.** The tablet only sends keys that exist as game actions. *Staggered / Together* fire mode works because the game has actions for it (*Staggered fire on / off*).
 - **MFD buttons only work when the matching action is bound in the game.** For example, *Set EMPs* needs *EMP preset* bound. Unbound buttons stay greyed out.
+- **It can't read your pips or master mode from the game.** Star Citizen doesn't publish them, so the tablet tracks what you press. Use MATCH or Resync when they drift.
+- **It doesn't copy your LIVE binds to PTU by itself.** You apply the tablet binds to PTU with one click, with the game closed.
 - **It can't see live in-game state** beyond what `Game.log` and `/showlocation` provide. Power, shield and fire-mode states on the tablet show what you pressed, not readings from the game.
 - **It isn't affiliated with CIG.** It's a fan project.
 
@@ -167,6 +194,24 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 
 **Does the tablet need the same Wi-Fi?**
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
+
+## Changelog
+
+### 1.1.6
+
+- **Setup loop fixed:** first-run setup could get stuck on step 2 with `EPERM` renaming `status.json` (antivirus or Controlled folder access holding the file). Writes now retry safely and setup resumes.
+- **Tablet usable pips** per ship from the Star Citizen Wiki power data, so each ship shows its own total.
+- **Absolute power and shield binds** and a **Resync** button on the tablet.
+- **NAV / SCM chips** switch the game directly when the 3-key *Set master mode NAV / SCM* binds exist, and stay display-only otherwise.
+- **Master mode** presses are noticed faster (every 0.2 s).
+- **PTU support:** the tablet and mission helper follow the build you started; Settings & Keybinding can apply the 3-key tablet binds to PTU's `actionmaps.xml` (game closed, backup first, only when you click).
+- **Backup & Restore** for your session plan, mission tracker and settings.
+- Exploration map: linked maps and **Locate**.
+- About shows 1.1.6.
+
+### 1.1.5
+
+- Weapons Compare rework, faster 3D redraw when switching tabs, 3-key tablet binds by default.
 
 ## Support
 
@@ -185,6 +230,7 @@ Credits match the in-app **Settings & Keybinding > About** list.
 - Erkul and SPViewer — also ship-gun / ship-performance cross-checks and Erkul Browse loadout pins, and the public SPViewer changelog. Private/session APIs were not called. Code, UI and artwork are not used.
 - Community FPS and ship guides cited in presets: bustedloops, expcarry, r/starcitizen, MMOPIXEL.
 - [Star Citizen Wiki API](https://api.star-citizen.wiki) — structured `personal_weapon` JSON used only to fill RPM and spread fields that were still class defaults after the game-file extract, and to record mismatches. Game-file values are never overwritten. Their site design and other media are not used.
+- [Star Citizen Wiki API](https://api.star-citizen.wiki) — ship power data (`power.generation_segments`) used for the tablet's usable pips per ship (`power_budget.v1.json`), licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Thanks to the Star Citizen Wiki team.
 - Game data comes from your own local Star Citizen install; trade prices are UEX community reports.
 - 3D export uses **StarBreaker** (`starbreaker_msvc.exe`), MIT licence. Its licence and notice ship in `tools/starbreaker/` (LICENSE, NOTICE). Thanks to its authors.
 - Built with Electron, Three.js, Vite and glTF-Transform. Their licences are included in the app.
