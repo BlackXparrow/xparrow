@@ -63,6 +63,8 @@ b284b72ad93afd0103690fcf31a628632d4e33cf2a9dd2070f5e8b2954fa0da8  Xparrow-Setup-
 3df8a20977e235485e04726dc3855e93a20b516e199d321a1ca0684985e849a3  Xparrow-Portable-1.1.7.exe
 ```
 
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.7.exe](https://www.virustotal.com/gui/file/b284b72ad93afd0103690fcf31a628632d4e33cf2a9dd2070f5e8b2954fa0da8): 0 detections (0/52 engines, Nov 20, 2026). Each new release is scanned too.
+
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
 ### Updates
