@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.6
+# Xparrow 1.1.7
 
 **Gear up. Plan smart. Fly free.**
 
@@ -49,11 +49,27 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.6):
+From **Releases** (v1.1.7):
 
-- `Xparrow-Setup-1.1.6.exe`: installer (Start menu shortcut, uninstaller).
-- `Xparrow-Portable-1.1.6.zip`: portable. Unzip it and run `Xparrow-Portable-1.1.6.exe`. Nothing gets installed.
-- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.6.exe` in PowerShell and compare.
+- `Xparrow-Setup-1.1.7.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
+- `Xparrow-Portable-1.1.7.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
+- `latest.yml` and `Xparrow-Setup-1.1.7.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.7.exe` in PowerShell and compare.
+
+SHA256 (v1.1.7):
+
+```
+b284b72ad93afd0103690fcf31a628632d4e33cf2a9dd2070f5e8b2954fa0da8  Xparrow-Setup-1.1.7.exe
+3df8a20977e235485e04726dc3855e93a20b516e199d321a1ca0684985e849a3  Xparrow-Portable-1.1.7.exe
+```
+
+**Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
+
+### Updates
+
+- **From 1.1.7 on, the installed version updates itself.** Xparrow checks GitHub Releases when it starts and every few hours, downloads a new version in the background and installs it the next time you quit Xparrow. Your data, settings and session plan are kept.
+- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.7.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
+- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.7 and the pages load. No manual data pack is needed.
 
 ## First-run setup
 
@@ -63,6 +79,8 @@ From **Releases** (v1.1.6):
 4. Ship 3D loads later, on demand. The first load takes a few minutes per ship and runs in the background at low priority.
 
 Your game files are only **read**, never changed. When the game updates, Xparrow notices the new build and refreshes its data.
+
+Since 1.1.7 the installer also ships the data that setup doesn't build from your game (weapons, ship loadouts, blueprints, Black Market, exploration, icons and more), so every tab works right after the first run. It only adds missing files and never overwrites your own.
 
 ## Why it links your own game folders
 
@@ -128,8 +146,20 @@ Since 1.1.5 every action the tablet presses or watches uses a **3-key keyboard c
 - **Restore** picks a backup folder, asks you to confirm, keeps a safety copy of what it replaces, and then reloads.
 - Game files are not part of the backup. Your `actionmaps.xml` backups stay in the Keybinding tab.
 
+## Keeping locally customized files
+
+If you edit one of Xparrow's own files in your data folder on purpose (for example a tweaked page or helper script), an app update would normally replace it with the new version. To keep your copy, create `_local_keep.json` in the data folder (the folder you picked during setup) with a list of paths relative to that folder:
+
+```json
+["overlay.html", "mission-helper/my-tweak.mjs"]
+```
+
+Files on that list are left alone by every update. They also stop getting fixes, so remove a line when you want the official version back. Game data, models and your settings are never replaced by app updates anyway.
+
 ## Troubleshooting
 
+- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.7.exe` over it. The missing data is added and nothing is rebuilt.
+- **Windows says "Windows protected your PC":** the app isn't code-signed. Click **More info > Run anyway** (see *Download*).
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
 - **Not enough disk space:** choose another drive in setup. Xparrow stops before a drive drops below its safety margin.
 - **A ship shows "3D coming soon":** press *Load 3D from my game files* on that ship. If it fails, the stats and loadouts still work. Use *Report 3D issue* to save a local report in `%APPDATA%\Xparrow\3d_reports\` that you can share.
@@ -196,6 +226,16 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
 
 ## Changelog
+
+### 1.1.7
+
+- **Every tab works on a fresh install:** the installer now includes the weapons, ship loadout, blueprint, Black Market, exploration, Wikelo, reputation, PTU and icon data that setup doesn't build from the game files. A 1.1.6 install with empty pages only needs 1.1.7 installed over it.
+- **Automatic updates** from GitHub Releases for the installed version (checks at start and every few hours, installs when you quit).
+- **Game-data updates are sturdier:** a rebuild keeps ship presets, manufacturers and item grouping, the crafting check error is fixed, and the "rename dcb" error after a successful update is gone.
+- **StarBreaker is always found:** the updater uses the copy that ships with Xparrow, and says clearly if it's missing instead of skipping 3D exports.
+- **Weapon paint layers** (camo, blend maps, logo stencils) now build on every PC.
+- **Keep locally customized files** across updates with `_local_keep.json`.
+- About shows 1.1.7.
 
 ### 1.1.6
 
