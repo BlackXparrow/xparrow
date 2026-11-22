@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.14
+# Xparrow 1.1.15
 
 **Gear up. Plan smart. Fly free.**
 
@@ -49,21 +49,21 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.14):
+From **Releases** (v1.1.15):
 
-- `Xparrow-Setup-1.1.14.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
-- `Xparrow-Portable-1.1.14.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
-- `latest.yml` and `Xparrow-Setup-1.1.14.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
-- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.14.exe` in PowerShell and compare.
+- `Xparrow-Setup-1.1.15.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
+- `Xparrow-Portable-1.1.15.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
+- `latest.yml` and `Xparrow-Setup-1.1.15.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.15.exe` in PowerShell and compare.
 
-SHA256 (v1.1.14):
+SHA256 (v1.1.15):
 
 ```
-ef6cc002fbec8dcc86653bad9659de33b66a4e2ce8236d3887ca682dc3fd1309  Xparrow-Setup-1.1.14.exe
-c15220308d7b9e730fd7f8c7073aa2b341183d6a2ba56128cc5f18a8221ed5ce  Xparrow-Portable-1.1.14.exe
+746618a86b6e5461245d6ce9b5fd26404bb7e04b11d3c71e1c6822168530cece  Xparrow-Setup-1.1.15.exe
+9fbe868012d725a8c9938bab45efa6efb71c72107b4db9c7e046a2ce73d8fe7f  Xparrow-Portable-1.1.15.exe
 ```
 
-**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.14.exe](https://www.virustotal.com/gui/file/ef6cc002fbec8dcc86653bad9659de33b66a4e2ce8236d3887ca682dc3fd1309): 0 detections (0/50 engines, Nov 22, 2026). Each new release is scanned too.
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.15.exe](https://www.virustotal.com/gui/file/746618a86b6e5461245d6ce9b5fd26404bb7e04b11d3c71e1c6822168530cece): 0 detections (0/45 engines, Nov 22, 2026). Each new release is scanned too.
 
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
@@ -71,8 +71,8 @@ c15220308d7b9e730fd7f8c7073aa2b341183d6a2ba56128cc5f18a8221ed5ce  Xparrow-Portab
 
 - **From 1.1.14 on, updates install when it is safe.** Xparrow checks GitHub Releases when it starts and every two hours, and downloads a new version quietly. It installs after the app has been idle for about 10 minutes and Star Citizen is not running, or the next time you open Xparrow. A small **Update ready, restart now** button in the header lets you install immediately. It will not interrupt you mid-game and will not close Star Citizen. Your data, settings and session plan are kept.
 - **From 1.1.7 through 1.1.13:** those versions also update themselves, but they install the next time you quit Xparrow. After you reach 1.1.14, the safer install above takes over.
-- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.14.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
-- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.14 and the pages load. No manual data pack is needed.
+- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.15.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
+- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.15 and the pages load. No manual data pack is needed.
 
 ## First-run setup
 
@@ -161,7 +161,7 @@ Files on that list are left alone by every update. They also stop getting fixes,
 
 ## Troubleshooting
 
-- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.14.exe` over it. The missing data is added and nothing is rebuilt.
+- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.15.exe` over it. The missing data is added and nothing is rebuilt.
 - **Windows says "Windows protected your PC":** the app isn't code-signed. Click **More info > Run anyway** (see *Download*).
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
 - **Not enough disk space:** choose another drive in setup. Xparrow stops before a drive drops below its safety margin.
@@ -229,6 +229,12 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
 
 ## Changelog
+
+### 1.1.15
+
+- **Outfits no longer stays on "Loading 3D viewer…"** with an empty Items list when the catalog or optional gamedata takes too long, when presets are missing, or when an old kept main file was left behind after an upgrade. The item grid paints as soon as the catalog is accepted. If the catalog cannot be loaded, you get a clear message and **Try again**.
+- **App updates land more reliably.** After an installer run, Xparrow waits for its bundled viewer before refreshing app code and logs the path it checked. `index.html` and `main-*.js` are always refreshed (unless they are a private keep). The version stamp is written only after a successful refresh. HTML, JSON and assets are served without being cached, and the HTTP cache is cleared after a code refresh.
+- **Renderer errors** (console errors, unhandled rejections and failed requests) are written to `xparrow.log`, rate-limited and without personal data, so a stuck tab is easier to diagnose. DevTools stays off in packaged builds.
 
 ### 1.1.14
 
