@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.12
+# Xparrow 1.1.13
 
 **Gear up. Plan smart. Fly free.**
 
@@ -49,29 +49,29 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.12):
+From **Releases** (v1.1.13):
 
-- `Xparrow-Setup-1.1.12.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
-- `Xparrow-Portable-1.1.12.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
-- `latest.yml` and `Xparrow-Setup-1.1.12.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
-- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.12.exe` in PowerShell and compare.
+- `Xparrow-Setup-1.1.13.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
+- `Xparrow-Portable-1.1.13.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
+- `latest.yml` and `Xparrow-Setup-1.1.13.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.13.exe` in PowerShell and compare.
 
-SHA256 (v1.1.12):
+SHA256 (v1.1.13):
 
 ```
-da29aee6b1ed241ec8d340dbbaf396c8f9ab71de86ac9417eeced33ac84bcad1  Xparrow-Setup-1.1.12.exe
-d0de7453bae38873310f87a9601d6d5430ad3040d70507ccc86507f77515889d  Xparrow-Portable-1.1.12.exe
+bf39a2bbd6809a1831cc4ea35a0b48732ea6486476fcf6f5b1c0b3709e68499f  Xparrow-Setup-1.1.13.exe
+32de2b3c06d8403a5b84e7933c40c25226e8a75d4e958f1ee0eed1f5f2efff8e  Xparrow-Portable-1.1.13.exe
 ```
 
-**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.12.exe](https://www.virustotal.com/gui/file/da29aee6b1ed241ec8d340dbbaf396c8f9ab71de86ac9417eeced33ac84bcad1): 0 detections (0/49 engines, Nov 21, 2026). Each new release is scanned too.
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.13.exe](https://www.virustotal.com/gui/file/bf39a2bbd6809a1831cc4ea35a0b48732ea6486476fcf6f5b1c0b3709e68499f): 0 detections (0/48 engines, Nov 22, 2026). Each new release is scanned too.
 
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
 ### Updates
 
 - **From 1.1.7 on, the installed version updates itself.** Xparrow checks GitHub Releases when it starts and every few hours, downloads a new version in the background and installs it the next time you quit Xparrow. Your data, settings and session plan are kept.
-- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.12.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
-- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.12 and the pages load. No manual data pack is needed.
+- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.13.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
+- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.13 and the pages load. No manual data pack is needed.
 
 ## First-run setup
 
@@ -160,7 +160,7 @@ Files on that list are left alone by every update. They also stop getting fixes,
 
 ## Troubleshooting
 
-- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.12.exe` over it. The missing data is added and nothing is rebuilt.
+- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.13.exe` over it. The missing data is added and nothing is rebuilt.
 - **Windows says "Windows protected your PC":** the app isn't code-signed. Click **More info > Run anyway** (see *Download*).
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
 - **Not enough disk space:** choose another drive in setup. Xparrow stops before a drive drops below its safety margin.
@@ -228,6 +228,14 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
 
 ## Changelog
+
+### 1.1.13
+
+- **Weapons Compare attachments** now mount on both guns ? the live gun and the holographic PTU gun ? at the correct port.
+- **Scan my devices** in Settings and Keybinding finds your joysticks and can apply My setup or Auto-detect.
+- **Ships sit on the floor** in the 3D viewer.
+- **Ship-model fixes:** the Avenger Stalker's ghost landing-gear mesh is dropped, guns on the Eclipse and the 890 Jump can be swapped in the loadout, and broken leftover parts and windows are cleaned up.
+- **Existing ship models are re-checked automatically** in the background after this update. Originals are backed up first, and a model is only replaced when the check improves it.
 
 ### 1.1.12
 
