@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.16
+# Xparrow 1.1.17
 
 **Gear up. Plan smart. Fly free.**
 
@@ -49,21 +49,21 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.16):
+From **Releases** (v1.1.17):
 
-- `Xparrow-Setup-1.1.16.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
-- `Xparrow-Portable-1.1.16.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
-- `latest.yml` and `Xparrow-Setup-1.1.16.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
-- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.16.exe` in PowerShell and compare.
+- `Xparrow-Setup-1.1.17.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
+- `Xparrow-Portable-1.1.17.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
+- `latest.yml` and `Xparrow-Setup-1.1.17.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.17.exe` in PowerShell and compare.
 
-SHA256 (v1.1.16):
+SHA256 (v1.1.17):
 
 ```
-23e57e1f64764510eecf090c53291e4bd8759eb0179d108394928c4230951eba  Xparrow-Setup-1.1.16.exe
-45c3bd68281ba095d62d21dd7b10dbd25df3aeba2240f50f8fef10a46cf8b25e  Xparrow-Portable-1.1.16.exe
+a59c347567c700cf26ed12c51e4ed6f1390ef0acb3312d0a7798c92a8730910f  Xparrow-Setup-1.1.17.exe
+4cb01fd92d5533d51e925d8ab272a3c585bcd4f5c2c6092f7227fe501c5b939f  Xparrow-Portable-1.1.17.exe
 ```
 
-**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.16.exe](https://www.virustotal.com/gui/file/23e57e1f64764510eecf090c53291e4bd8759eb0179d108394928c4230951eba): 0 detections (0/52 engines, Nov 22, 2026). Each new release is scanned too.
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.17.exe](https://www.virustotal.com/gui/file/a59c347567c700cf26ed12c51e4ed6f1390ef0acb3312d0a7798c92a8730910f): scan pending. Each new release is scanned too.
 
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
@@ -71,8 +71,8 @@ SHA256 (v1.1.16):
 
 - **From 1.1.14 on, updates install when it is safe.** Xparrow checks GitHub Releases when it starts and every two hours, and downloads a new version quietly. It installs after the app has been idle for about 10 minutes and Star Citizen is not running, or the next time you open Xparrow. A small **Update ready, restart now** button in the header lets you install immediately. It will not interrupt you mid-game and will not close Star Citizen. Your data, settings and session plan are kept.
 - **From 1.1.7 through 1.1.13:** those versions also update themselves, but they install the next time you quit Xparrow. After you reach 1.1.14, the safer install above takes over.
-- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.16.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
-- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.16 and the pages load. No manual data pack is needed.
+- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.17.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
+- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.17 and the pages load. No manual data pack is needed.
 
 ## First-run setup
 
@@ -161,7 +161,7 @@ Files on that list are left alone by every update. They also stop getting fixes,
 
 ## Troubleshooting
 
-- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.16.exe` over it. The missing data is added and nothing is rebuilt.
+- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.17.exe` over it. The missing data is added and nothing is rebuilt.
 - **Windows says "Windows protected your PC":** the app isn't code-signed. Click **More info > Run anyway** (see *Download*).
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
 - **Not enough disk space:** choose another drive in setup. Xparrow stops before a drive drops below its safety margin.
@@ -229,6 +229,11 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
 
 ## Changelog
+
+### 1.1.17
+
+- **Live position works automatically** on every install, including when Star Citizen is on a custom path such as `E:\\RSI\\StarCitizen\\LIVE`. Xparrow finds `Game.log` itself, keeps the helper running, and the map follows you from the game's own log. If you type `/showlocation` in chat, the game copies the coordinates itself and the map updates. Settings has a last-resort folder picker if the game still can't be found.
+- **Item pictures** now show on the Items cards even when an existing catalog is missing thumbnail paths, or when some thumbnail files were never copied to the data folder. On every launch, missing bundled files are copied (existing files are not overwritten), empty or broken `item.thumb` fields are filled when the matching picture is on disk, and the Items grid can fall back to `thumbs/sc/{id}.webp`.
 
 ### 1.1.16
 
