@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.19
+# Xparrow 1.1.20
 
 **Gear up. Plan smart. Fly free.**
 
@@ -49,21 +49,21 @@ Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weap
 
 ## Download
 
-From **Releases** (v1.1.19):
+From **Releases** (v1.1.20):
 
-- `Xparrow-Setup-1.1.19.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
-- `Xparrow-Portable-1.1.19.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
-- `latest.yml` and `Xparrow-Setup-1.1.19.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
-- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.19.exe` in PowerShell and compare.
+- `Xparrow-Setup-1.1.20.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
+- `Xparrow-Portable-1.1.20.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
+- `latest.yml` and `Xparrow-Setup-1.1.20.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.20.exe` in PowerShell and compare.
 
-SHA256 (v1.1.19):
+SHA256 (v1.1.20):
 
 ```
-87182791a0d99b71136aa34e72764b59a613ac718faf1fc034ce67399c16771f  Xparrow-Setup-1.1.19.exe
-d0093c024414a88ab9ab79a5c1685df025b069a7abcd9fe5cba70c1c141bd891  Xparrow-Portable-1.1.19.exe
+5f0a4f2dbe24e00ecc60805fedee5d9cc2c32b5eb31cb2dade91fb84f0ff613b  Xparrow-Setup-1.1.20.exe
+3e35c812ef334de1ebc107eed57a907de3833c01719ac4f8068ff7693b3788c7  Xparrow-Portable-1.1.20.exe
 ```
 
-**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.19.exe](https://www.virustotal.com/gui/file/87182791a0d99b71136aa34e72764b59a613ac718faf1fc034ce67399c16771f): 0 detections (0/48 engines, Nov 23, 2026). Each new release is scanned too.
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.20.exe](https://www.virustotal.com/gui/file/5f0a4f2dbe24e00ecc60805fedee5d9cc2c32b5eb31cb2dade91fb84f0ff613b): scan pending. Each new release is scanned too.
 
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
@@ -71,8 +71,8 @@ d0093c024414a88ab9ab79a5c1685df025b069a7abcd9fe5cba70c1c141bd891  Xparrow-Portab
 
 - **From 1.1.14 on, updates install when it is safe.** Xparrow checks GitHub Releases when it starts and every two hours, and downloads a new version quietly. It installs after the app has been idle for about 10 minutes and Star Citizen is not running, or the next time you open Xparrow. A small **Update ready, restart now** button in the header lets you install immediately. It will not interrupt you mid-game and will not close Star Citizen. Your data, settings and session plan are kept.
 - **From 1.1.7 through 1.1.13:** those versions also update themselves, but they install the next time you quit Xparrow. After you reach 1.1.14, the safer install above takes over.
-- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.19.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
-- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.19 and the pages load. No manual data pack is needed.
+- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.20.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
+- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.20 and the pages load. No manual data pack is needed.
 
 ## First-run setup
 
@@ -161,7 +161,7 @@ Files on that list are left alone by every update. They also stop getting fixes,
 
 ## Troubleshooting
 
-- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.19.exe` over it. The missing data is added and nothing is rebuilt.
+- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.20.exe` over it. The missing data is added and nothing is rebuilt.
 - **Windows says "Windows protected your PC":** the app isn't code-signed. Click **More info > Run anyway** (see *Download*).
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
 - **Not enough disk space:** choose another drive in setup. Xparrow stops before a drive drops below its safety margin.
@@ -229,6 +229,10 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
 
 ## Changelog
+
+### 1.1.20
+
+- **Fixed the Ship Loadout page going blank or freezing when switching 3D ship models.** A leftover or damaged model file could be loaded over and over until the 3D view crashed. Missing or bad models now show a clean placeholder, and the stats and loadout stay usable. Switching ships quickly cancels the previous load, and if the 3D view ever crashes the window reloads itself.
 
 ### 1.1.19
 
