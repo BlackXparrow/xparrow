@@ -4,12 +4,73 @@
 
 **Gear up. Plan smart. Fly free.**
 
-[![Download](https://img.shields.io/github/v/release/BlackXparrow/xparrow?label=Download&color=2ea44f)](https://github.com/BlackXparrow/xparrow/releases/latest) [![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Xparrow-c58bff?logo=ko-fi&logoColor=white)](https://ko-fi.com/blackxparrow)
+[![Try Xparrow Lite in your browser](https://img.shields.io/badge/Try_Xparrow_Lite-in_your_browser-c58bff?style=for-the-badge)](https://xparrow-lite.pages.dev) [![Download the App](https://img.shields.io/github/v/release/BlackXparrow/xparrow?style=for-the-badge&label=Download%20the%20App&color=2ea44f)](https://github.com/BlackXparrow/xparrow/releases/latest) [![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Xparrow-c58bff?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/blackxparrow)
 
 Xparrow is a fan-made desktop companion for Star Citizen. It shows outfits, weapons, ship loadouts, LIVE vs PTU changes, your session plan and a tablet MFD. Everything it shows is read from **your own** Star Citizen install on your PC.
 
+Want to try it first? **[Xparrow Lite](https://xparrow-lite.pages.dev)** runs in your browser, including on your phone — no download.
+
 
 > Promo video (62 s): [xparrow_promo.mp4](https://github.com/BlackXparrow/xparrow/releases/download/v1.1.6/xparrow_promo.mp4): outfits, weapons with attachments, ships in 3D, LIVE vs PTU, session plan, damage viewer, live location on the map and the tablet MFD.
+
+## ✨ Xparrow Lite vs Xparrow App
+
+<p align="center">
+  <a href="https://xparrow-lite.pages.dev"><img src="https://img.shields.io/badge/Try_Xparrow_Lite-in_your_browser-c58bff?style=for-the-badge" alt="Try Xparrow Lite in your browser"></a>
+  &nbsp;
+  <a href="https://github.com/BlackXparrow/xparrow/releases/latest"><img src="https://img.shields.io/github/v/release/BlackXparrow/xparrow?style=for-the-badge&label=Download%20the%20App&color=2ea44f" alt="Download the App"></a>
+</p>
+
+**Xparrow Lite** is the free browser version: no install, and it works on your phone. **Xparrow** (the Windows app) is the full desktop companion, with 3D, the in-game overlay, the tablet MFD and auto-update.
+
+| Feature | Lite (browser)<br><sub>No install. Works on your phone.</sub> | App (Windows)<br><sub>Full desktop app: overlay, 3D, auto-update.</sub> |
+|:--------|:----------------------------------------------------------:|:---------------------------------------------------------------------:|
+| | **Getting started** | |
+| **Runs in your browser** — nothing to install | ✅ | ➖ Windows app (installer or portable) |
+| **Works on a phone** — browse outfits, ships, the map and more | ✅ | ➖ the phone is used as the tablet MFD |
+| **Always current** | ✅ the website is already the latest | ✅ built-in auto-update from Releases |
+| | **Outfits & 3D** | |
+| **Outfit try-on** — armour and clothes on a character | ✅ 2D paper doll (front/back, male/female) | ✅ 3D turntable, colour variants, hologram |
+| **Outfit Compare** | ✅ side-by-side stats | ✅ stats + side-by-side 3D |
+| **Item details** — craft it, loot it, buy it, share a link | ✅ | ✅ |
+| **3D models** — outfits, weapons and ships | ➖ pictures only (never upscaled) | ✅ 3D views and holograms |
+| **Load 3D from your game files** | ➖ | ✅ on demand from your own install |
+| | **Ships** | |
+| **Ship catalog and loadout** — guns, components, totals, where to buy | ✅ pictures (¾, top, underside) and stats | ✅ 3D loadout, drag-and-drop parts |
+| **Ship Compare (LIVE vs PTU)** — buffs, nerfs and new items | ✅ | ✅ |
+| **Fleet hangar planner** — measured bays | ➖ | ✅ |
+| | **Weapons** | |
+| **Weapons catalog and stats** | ✅ pictures and real numbers | ✅ 3D weapons, attachments and presets |
+| **Attachments** | ✅ listed, with stats vs the gun | ✅ drag onto the gun; the stats and the model update |
+| **Weapons LIVE vs PTU** | ✅ | ✅ including a holographic PTU gun; drop an attachment on one and it is fitted on both |
+| **Damage viewer** | ➖ | ✅ |
+| | **Map & Exploration** | |
+| **Star map** — Stanton, Pyro and Nyx | ✅ | ✅ |
+| **Live position from Game.log** | ✅ pick Game.log once in Chrome or Edge; follows while the tab is open | ✅ automatic from your install |
+| **Locate** — paste a `/showlocation` from game chat | ✅ | ✅ |
+| **Hidden locations** — wrecks, derelicts, caves, easter eggs | ✅ | ✅ |
+| **Quantum routes** — destination, ship or drive, QT time | ✅ | ✅ |
+| **Loot nearby** — pick gear and rarity, set a radius, see the closest drops | ✅ | ✅ |
+| | **Planning & data** | |
+| **Blueprints & crafting** — filters, how to get it, craft simulator | ✅ | ✅ |
+| **Wikelo Emporium** | ✅ | ✅ |
+| **Black Market** — contraband, prices, Executive Hangar timer | ✅ | ✅ |
+| **Session plan** — today's loot list, map guidance and progress | ✅ saved in this browser (syncs if you link the app) | ✅ plus Backup & Restore |
+| **Faction standings** — ranks and the game's own icons | ✅ | ✅ |
+| **Mission & blueprint tracker** — follows your active contract from Game.log | ➖ | ✅ payout, standing and blueprint drops, with one-click + Plan |
+| **Ask SC** — lore, items, trade prices, PTU changes | ➖ | ✅ answers from your local data, offline, no account |
+| | **In-game Overlay & MFD** | |
+| **In-game overlay** — always-on-top while you play | ➖ | ✅ |
+| **Tablet MFD** — power, weapons, shields and fire mode, using your game binds | ➖ preview in Settings; ship control needs the app | ✅ full tablet, QR pairing, per-ship look and pips |
+| **Link Lite to the app** — live map, plan sync, MFD through the app | ✅ 6-character code in Settings | ✅ Settings → Link Xparrow Lite |
+| | **Data & Updates** | |
+| **Settings & Keybinding** — binds, curves and graphics, LIVE and PTU | ➖ | ✅ read from your game files |
+| **Joystick flight tester** — holographic ship, your binds and curves | ➖ | ✅ canyon, meteor dodge, orbit and maneuver drills |
+| **Scan joysticks / device setup** | ➖ | ✅ |
+| **Backup & Restore** — plan, mission tracker and settings | ➖ | ✅ |
+| **Reads your own game files locally** — nothing is uploaded | ➖ optional Game.log pick or app link only | ✅ outfits, 3D, binds and data stay on your PC |
+
+**Want everything?** [Get the full app](https://github.com/BlackXparrow/xparrow/releases/latest) — it's free.
 
 ## Features
 
