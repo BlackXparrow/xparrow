@@ -63,7 +63,7 @@ SHA256 (v1.1.20):
 3e35c812ef334de1ebc107eed57a907de3833c01719ac4f8068ff7693b3788c7  Xparrow-Portable-1.1.20.exe
 ```
 
-**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.20.exe](https://www.virustotal.com/gui/file/5f0a4f2dbe24e00ecc60805fedee5d9cc2c32b5eb31cb2dade91fb84f0ff613b): scan pending. Each new release is scanned too.
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.20.exe](https://www.virustotal.com/gui/file/5f0a4f2dbe24e00ecc60805fedee5d9cc2c32b5eb31cb2dade91fb84f0ff613b): 0 detections (0/45 engines, Nov 23, 2026). Each new release is scanned too.
 
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
