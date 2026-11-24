@@ -43,7 +43,7 @@ Want to try it first? **[Xparrow Lite](https://xparrow-lite.pages.dev)** runs in
 | **Weapons catalog and stats** | ✅ pictures and real numbers | ✅ 3D weapons, attachments and presets |
 | **Attachments** | ✅ listed, with stats vs the gun | ✅ drag onto the gun; the stats and the model update |
 | **Weapons LIVE vs PTU** | ✅ | ✅ including a holographic PTU gun; drop an attachment on one and it is fitted on both |
-| **Damage viewer** | ➖ | ✅ |
+| **Damage viewer** | ➖ | ✅ see hits per body part, health values and armour resistance |
 | | **Map & Exploration** | |
 | **Star map** — Stanton, Pyro and Nyx | ✅ | ✅ |
 | **Live position from Game.log** | ✅ pick Game.log once in Chrome or Edge; follows while the tab is open | ✅ automatic from your install |
