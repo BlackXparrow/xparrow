@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.26
+# Xparrow 1.1.27
 
 **Gear up. Plan smart. Fly free.**
 
@@ -110,21 +110,21 @@ Want to try it first? **[Xparrow Lite](https://xparrow-lite.pages.dev)** runs in
 
 ## Download
 
-From **Releases** (v1.1.26):
+From **Releases** (v1.1.27):
 
-- `Xparrow-Setup-1.1.26.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
-- `Xparrow-Portable-1.1.26.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
-- `latest.yml` and `Xparrow-Setup-1.1.26.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
-- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.26.exe` in PowerShell and compare.
+- `Xparrow-Setup-1.1.27.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
+- `Xparrow-Portable-1.1.27.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
+- `latest.yml` and `Xparrow-Setup-1.1.27.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.27.exe` in PowerShell and compare.
 
-SHA256 (v1.1.26):
+SHA256 (v1.1.27):
 
 ```
-7c2fa5d08ec83c3b52ee07f6c0d8c26e603a46437e02a1d12330d842b883f9c7  Xparrow-Setup-1.1.26.exe
-c0c0aa3306c327cd54ab6dac4a409e351562fb40f453d7b31a4b2dffd375ff8f  Xparrow-Portable-1.1.26.exe
+e1a78ddde417fa0a1bd0eed02e08d726198c9670f83d0bda0a48de42247a5ea9  Xparrow-Setup-1.1.27.exe
+7b30f23e16c2664f89577cb186a721b96a3937311403d0c2aaba2ce6374eeb8f  Xparrow-Portable-1.1.27.exe
 ```
 
-**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.26.exe](https://www.virustotal.com/gui/file/7c2fa5d08ec83c3b52ee07f6c0d8c26e603a46437e02a1d12330d842b883f9c7): scan pending. Each new release is scanned too.
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.27.exe](https://www.virustotal.com/gui/file/e1a78ddde417fa0a1bd0eed02e08d726198c9670f83d0bda0a48de42247a5ea9): scan pending. Each new release is scanned too.
 
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
@@ -132,8 +132,8 @@ c0c0aa3306c327cd54ab6dac4a409e351562fb40f453d7b31a4b2dffd375ff8f  Xparrow-Portab
 
 - **From 1.1.14 on, updates install when it is safe.** Xparrow checks GitHub Releases when it starts and every two hours, and downloads a new version quietly. It installs after the app has been idle for about 10 minutes and Star Citizen is not running, or the next time you open Xparrow. A small **Update ready, restart now** button in the header lets you install immediately. It will not interrupt you mid-game and will not close Star Citizen. Your data, settings and session plan are kept.
 - **From 1.1.7 through 1.1.13:** those versions also update themselves, but they install the next time you quit Xparrow. After you reach 1.1.14, the safer install above takes over.
-- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.26.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
-- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.26 and the pages load. No manual data pack is needed.
+- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.27.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
+- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.27 and the pages load. No manual data pack is needed.
 
 ## First-run setup
 
@@ -238,7 +238,7 @@ Files on that list are left alone by every update. They also stop getting fixes,
 
 ## Troubleshooting
 
-- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.26.exe` over it. The missing data is added and nothing is rebuilt.
+- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.27.exe` over it. The missing data is added and nothing is rebuilt.
 - **Windows says "Windows protected your PC":** the app isn't code-signed. Click **More info > Run anyway** (see *Download*).
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
 - **Not enough disk space:** choose another drive in setup. Xparrow stops before a drive drops below its safety margin.
@@ -306,6 +306,12 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
 
 ## Changelog
+
+### 1.1.27
+
+- **In-app update prompt**: when a new version is found, a small Xparrow window says "New version available" with **Update** and **Later**. Update closes Xparrow (tray and helpers too), installs silently and opens Xparrow again by itself, with no extra prompts. Later keeps the normal install-when-you-close behaviour and asks again after a few hours and at the next start. It never appears while Star Citizen is running, and not in the portable build. The tablet also shows a small "update available" note.
+- **NAV and SCM pips come back when you switch with your stick or key binds**: after a switch the tablet now ignores the game's late power report until the ship has answered, so it can no longer overwrite what it just restored. Weapons, engines, shields and quantum on/off are remembered per mode.
+- **Tablet diagnostics stay on your PC**: the helper keeps a small local log of mode switches (tablet-diag.log in the helper folder, rotated at 1.5 MB). Nothing is sent anywhere and nothing is shown on screen.
 
 ### 1.1.26
 
