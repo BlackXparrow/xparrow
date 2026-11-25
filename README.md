@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.23
+# Xparrow 1.1.24
 
 **Gear up. Plan smart. Fly free.**
 
@@ -110,21 +110,21 @@ Want to try it first? **[Xparrow Lite](https://xparrow-lite.pages.dev)** runs in
 
 ## Download
 
-From **Releases** (v1.1.23):
+From **Releases** (v1.1.24):
 
-- `Xparrow-Setup-1.1.23.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
-- `Xparrow-Portable-1.1.23.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
-- `latest.yml` and `Xparrow-Setup-1.1.23.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
-- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.23.exe` in PowerShell and compare.
+- `Xparrow-Setup-1.1.24.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
+- `Xparrow-Portable-1.1.24.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
+- `latest.yml` and `Xparrow-Setup-1.1.24.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.24.exe` in PowerShell and compare.
 
-SHA256 (v1.1.23):
+SHA256 (v1.1.24):
 
 ```
-a4e0b20ab78709ebee4fae158a53312fafc78525fd7401b5d98d559f7c2e11fc  Xparrow-Setup-1.1.23.exe
-70f8519a47355a2a13b1cd302fcdcc1abae9eb6c80277042d6e091c8a7e24272  Xparrow-Portable-1.1.23.exe
+842eb0f4a5aedc201a1b1f6c368b9adfec7c5c90346854ff0b7f36abcec14c19  Xparrow-Setup-1.1.24.exe
+50da18b59b457b4535133ab52a3c5b2254bf662eadb918e4edf144647dbe568d  Xparrow-Portable-1.1.24.exe
 ```
 
-**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.23.exe](https://www.virustotal.com/gui/file/a4e0b20ab78709ebee4fae158a53312fafc78525fd7401b5d98d559f7c2e11fc): scan pending. Each new release is scanned too.
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.24.exe](https://www.virustotal.com/gui/file/842eb0f4a5aedc201a1b1f6c368b9adfec7c5c90346854ff0b7f36abcec14c19): scan pending. Each new release is scanned too.
 
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
@@ -132,8 +132,8 @@ a4e0b20ab78709ebee4fae158a53312fafc78525fd7401b5d98d559f7c2e11fc  Xparrow-Setup-
 
 - **From 1.1.14 on, updates install when it is safe.** Xparrow checks GitHub Releases when it starts and every two hours, and downloads a new version quietly. It installs after the app has been idle for about 10 minutes and Star Citizen is not running, or the next time you open Xparrow. A small **Update ready, restart now** button in the header lets you install immediately. It will not interrupt you mid-game and will not close Star Citizen. Your data, settings and session plan are kept.
 - **From 1.1.7 through 1.1.13:** those versions also update themselves, but they install the next time you quit Xparrow. After you reach 1.1.14, the safer install above takes over.
-- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.23.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
-- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.23 and the pages load. No manual data pack is needed.
+- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.24.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
+- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.24 and the pages load. No manual data pack is needed.
 
 ## First-run setup
 
@@ -222,7 +222,7 @@ Files on that list are left alone by every update. They also stop getting fixes,
 
 ## Troubleshooting
 
-- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.23.exe` over it. The missing data is added and nothing is rebuilt.
+- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.24.exe` over it. The missing data is added and nothing is rebuilt.
 - **Windows says "Windows protected your PC":** the app isn't code-signed. Click **More info > Run anyway** (see *Download*).
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
 - **Not enough disk space:** choose another drive in setup. Xparrow stops before a drive drops below its safety margin.
@@ -290,6 +290,13 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
 
 ## Changelog
+
+### 1.1.24
+
+- **Tablet power pips start where the game starts them**: on power-on and Reset power the tablet uses the game's own default distribution (minimums, coolers at least half, weapons/engines/shields half their pool, the rest to radar; life support on).
+- **Pip moves work like the game**: removing pips only frees them, adding needs free output, nothing is taken from coolers or other systems, and columns stop at the game minimum. With less output, weapons/engines/shields/radar are cut before coolers (game priority).
+- **Resync and Sync only touch weapons, engines and shields**: no Reset power press, so coolers, life support and radar stay put. They wait for queued presses, lower all three first, then raise each from its real minimum.
+- **About shows the version again**.
 
 ### 1.1.23
 
