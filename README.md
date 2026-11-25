@@ -1,6 +1,6 @@
 <p align="center"><img src="promo/hero_banner.jpg" alt="Xparrow: Gear up. Plan smart. Fly free." width="100%"></p>
 
-# Xparrow 1.1.24
+# Xparrow 1.1.25
 
 **Gear up. Plan smart. Fly free.**
 
@@ -110,21 +110,21 @@ Want to try it first? **[Xparrow Lite](https://xparrow-lite.pages.dev)** runs in
 
 ## Download
 
-From **Releases** (v1.1.24):
+From **Releases** (v1.1.25):
 
-- `Xparrow-Setup-1.1.24.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
-- `Xparrow-Portable-1.1.24.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
-- `latest.yml` and `Xparrow-Setup-1.1.24.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
-- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.24.exe` in PowerShell and compare.
+- `Xparrow-Setup-1.1.25.exe`: installer (Start menu shortcut, uninstaller). **Recommended:** it updates itself.
+- `Xparrow-Portable-1.1.25.exe`: portable. Run it from any folder. Nothing gets installed, and it does not update itself.
+- `latest.yml` and `Xparrow-Setup-1.1.25.exe.blockmap`: used by the built-in auto-update. You don't need to download them.
+- `SHA256SUMS.txt`: checksums. Check a download with `Get-FileHash .\Xparrow-Setup-1.1.25.exe` in PowerShell and compare.
 
-SHA256 (v1.1.24):
+SHA256 (v1.1.25):
 
 ```
-842eb0f4a5aedc201a1b1f6c368b9adfec7c5c90346854ff0b7f36abcec14c19  Xparrow-Setup-1.1.24.exe
-50da18b59b457b4535133ab52a3c5b2254bf662eadb918e4edf144647dbe568d  Xparrow-Portable-1.1.24.exe
+2143f0983e74cc3434134bce5ca0e2ffadd595bbdadc58f318a75df4eb398131  Xparrow-Setup-1.1.25.exe
+2329876de93cf4c0c3fc011c950eeeb6db82d8fdbcbffdd69786b61582008e14  Xparrow-Portable-1.1.25.exe
 ```
 
-**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.24.exe](https://www.virustotal.com/gui/file/842eb0f4a5aedc201a1b1f6c368b9adfec7c5c90346854ff0b7f36abcec14c19): scan pending. Each new release is scanned too.
+**Virus scan:** [VirusTotal scan of Xparrow-Setup-1.1.25.exe](https://www.virustotal.com/gui/file/2143f0983e74cc3434134bce5ca0e2ffadd595bbdadc58f318a75df4eb398131): scan pending. Each new release is scanned too.
 
 **Windows SmartScreen:** Xparrow isn't code-signed (signing certificates are expensive for a free fan project), so Windows may show *"Windows protected your PC"*. Click **More info > Run anyway**. Compare the checksum above first if you want to be sure the file is the real one.
 
@@ -132,8 +132,8 @@ SHA256 (v1.1.24):
 
 - **From 1.1.14 on, updates install when it is safe.** Xparrow checks GitHub Releases when it starts and every two hours, and downloads a new version quietly. It installs after the app has been idle for about 10 minutes and Star Citizen is not running, or the next time you open Xparrow. A small **Update ready, restart now** button in the header lets you install immediately. It will not interrupt you mid-game and will not close Star Citizen. Your data, settings and session plan are kept.
 - **From 1.1.7 through 1.1.13:** those versions also update themselves, but they install the next time you quit Xparrow. After you reach 1.1.14, the safer install above takes over.
-- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.24.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
-- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.24 and the pages load. No manual data pack is needed.
+- **Coming from 1.1.6 or older:** those versions can't update themselves. Download `Xparrow-Setup-1.1.25.exe` once and install it over your current version. Your data folder is kept and nothing has to be rebuilt. After that, updates are automatic.
+- **Weapons, Ship Loadout, Blueprints or Black Market said "failed to load" (404) on 1.1.6:** that version didn't include those data files. Install 1.1.25 and the pages load. No manual data pack is needed.
 
 ## First-run setup
 
@@ -171,7 +171,7 @@ Allow Xparrow through Windows Firewall on **private** networks when Windows asks
 
 <p align="center"><img src="promo/tablet_drake.jpg" width="80%" alt="Tablet MFD, power screen (Drake theme)"></p>
 
-**How it works:** the tablet doesn't read the game. It only presses the keybinds you set in Star Citizen, so it knows what it sent, not what the game currently shows. There's a small learning curve. Once you've matched it to your ship, it's quick.
+**How it works:** the tablet only presses the keybinds you set in Star Citizen, so it knows what it sent, not what the game currently shows (unless you turn on the optional [game telemetry](#optional-live-game-telemetry-since-1125)). There's a small learning curve. Once you've matched it to your ship, it's quick.
 
 1. **Board a ship.** The tablet switches to that ship by itself: the maker's look and logo, and that ship's power pip layout.
 2. **Match the tablet to the cockpit.** Every ship starts with its own default power setup: how many pips go to weapons, engines and shields, and which systems are on or off (life support, coolers, quantum and so on). Look at the in-game power MFD, tap **MATCH**, set the tablet's columns to what you see (no keys are sent while you match), then tap **MATCH** again.
@@ -189,10 +189,26 @@ Allow Xparrow through Windows Firewall on **private** networks when Windows asks
 
 **Tips**
 
-- **Match again** after a respawn, after you swap ships, or if you changed power with the keyboard or the in-game MFD. The tablet can't see those changes.
+- **Match again** after a respawn, after you swap ships, or if you changed power with the keyboard or the in-game MFD. Without game telemetry the tablet can't see those changes; with it, on/off states correct themselves (pips still need MATCH).
 - **LOCK** sends *Lock pitch / yaw*, the LOCK light on the in-game HUD. CPLD and ESP start lit (on) and LOCK starts unlit (off). Each one flips when its key is sent.
 - Systems with no keybind in the game, like life support, radar and coolers, are "set here to match": they change on the tablet only.
 - Which gun is in which group has no keybind either. Set it in the in-game Weapon Config, then tap the squares on the tablet to match.
+
+### Optional: live game telemetry (since 1.1.25)
+
+Star Citizen can share a read-only telemetry feed with programs on the same PC. It is off by default and Xparrow doesn't turn it on for you. To use it:
+
+1. In Windows, add a **user** environment variable named `GRPC_CLIENT_SERVER_ENABLED` with the value `true` (Start > *Edit environment variables for your account* > New).
+2. Fully close the RSI Launcher (tray icon too) and Star Citizen, then start them again.
+
+With the feed on, the tablet shows a **TLM LIVE** dot in the header and:
+
+- each system's real on/off state: weapons, engines, shields, coolers, life support and radar. Shields show OFFLINE when the game says they're off.
+- the ten warning lights (PWR, WPN, THR, SHLD, COOL, QDRV, RADR, PROX, HIT, MISL) as a thin row of small lamps above the power columns.
+- a **Flight instruments** page (tap the TLM dot, tap it again to go back, or use the arrows): speed, heading, radar altitude, G, boost, hydrogen fuel, quantum fuel when the game sends it, gear, landed, and the flight-assist lamps. The CPLD and ESP lamps follow the game.
+- on Star Citizen 5.0, master mode (NAV / SCM) plus a damage panel with the shield faces, shield level, hull and a HIT lamp, when the game sends them. The game doesn't report damage per part.
+
+The feed has no pip counts, so pips still follow the tablet's own model. It is display only: Xparrow never sends anything to the game through it. **TLM WAIT** means connected but not in a ship; **TLM OFF** means the feed isn't on (tap it for the steps).
 
 ### Tablet keybinds (3-key combos)
 
@@ -222,7 +238,7 @@ Files on that list are left alone by every update. They also stop getting fixes,
 
 ## Troubleshooting
 
-- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.24.exe` over it. The missing data is added and nothing is rebuilt.
+- **Weapons, Ship Loadout, Blueprints or Black Market show "failed to load" / 404:** you're on 1.1.6 or older. Install `Xparrow-Setup-1.1.25.exe` over it. The missing data is added and nothing is rebuilt.
 - **Windows says "Windows protected your PC":** the app isn't code-signed. Click **More info > Run anyway** (see *Download*).
 - **Setup says it can't find the game:** browse to the folder that contains `Data.p4k` (usually `...\StarCitizen\LIVE`).
 - **Not enough disk space:** choose another drive in setup. Xparrow stops before a drive drops below its safety margin.
@@ -270,9 +286,9 @@ Files on that list are left alone by every update. They also stop getting fixes,
 - **No changing game files.** The one exception is the MFD keybinds you approve in `actionmaps.xml`. Xparrow only writes those with the game closed, and it makes a backup first.
 - **It can't press anything the game has no keybind for.** The tablet only sends keys that exist as game actions. *Staggered / Together* fire mode works because the game has actions for it (*Staggered fire on / off*).
 - **MFD buttons only work when the matching action is bound in the game.** For example, *Set EMPs* needs *EMP preset* bound. Unbound buttons stay greyed out.
-- **It can't read your pips or master mode from the game.** Star Citizen doesn't publish them, so the tablet tracks what you press. Use MATCH or Resync when they drift.
+- **It can't read your pips from the game.** Star Citizen doesn't publish them (not even in its telemetry), so the tablet tracks what you press. Use MATCH or Resync when they drift. With the optional game telemetry on, on/off states, warning lights and flight data come from the game.
 - **It doesn't copy your LIVE binds to PTU by itself.** You apply the tablet binds to PTU with one click, with the game closed.
-- **It can't see live in-game state** beyond what `Game.log` and `/showlocation` provide. Power, shield and fire-mode states on the tablet show what you pressed, not readings from the game.
+- **It can't see live in-game state** beyond what `Game.log`, `/showlocation` and the optional game telemetry provide. Without telemetry, power, shield and fire-mode states on the tablet show what you pressed, not readings from the game.
 - **It isn't affiliated with CIG.** It's a fan project.
 
 ### Q&A
@@ -290,6 +306,14 @@ Xparrow extracts the ship from your `Data.p4k` (more than 100 GB) and builds the
 Yes. The tablet connects to Xparrow on your PC over your local network, so both must be on the same network, and Windows Firewall must allow Xparrow on private networks.
 
 ## Changelog
+
+### 1.1.25
+
+- **NAV and SCM keep their own pips**: the tablet now stores a separate pip layout for each master mode, per ship, and swaps it when you switch NAV / SCM (display only, no pip keys). Power on resets both; Reset power resets the current mode.
+- **Plan popup on the tablet**: tap the Plan area to see every item with its details, check marks and the next one, and tick or untick items (synced with the app).
+- **Optional live game telemetry on the tablet**: with Star Citizen's read-only telemetry turned on (user environment variable `GRPC_CLIENT_SERVER_ENABLED=true`, then restart the RSI Launcher), the tablet shows a TLM LIVE dot, each system's real on/off state (shields show OFFLINE when the game says off), thin warning lamps and a Flight instruments page (speed, heading, radar altitude, G, boost, fuel, gear, landed, flight-assist lamps). On 5.0 it also follows master mode and shows a damage panel (shield faces, shield level, hull, HIT lamp) when sent. Pips keep the 1.1.24 model. Display only; Xparrow never turns the feed on for you.
+- **Maker logos** for Argo, Banu, Gatac and Tumbril under the tablet header.
+- **Fix**: the tablet top bar says XPARROW TABLET.
 
 ### 1.1.24
 
